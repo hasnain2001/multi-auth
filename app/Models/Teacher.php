@@ -7,10 +7,10 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 
-class Admin extends Authenticatable
+class Teacher extends Authenticatable
 {
     use HasFactory, Notifiable;
-    protected $guard = 'admin';
+    protected $guard = 'teacher';
 
     /**
      * The attributes that are mass assignable.
