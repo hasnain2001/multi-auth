@@ -12,7 +12,7 @@ use App\Http\Controllers\Auth\VerifyEmailController;
 use App\Http\Controllers\Teacher\ProfileController;
 use Illuminate\Support\Facades\Route;
 
-Route::middleware('guest:teacher')->prefix('teacher')->name('teacher.')->group(function () {
+Route::middleware('guest:teacher')->prefix('employe')->name('employe.')->group(function () {
     Route::get('register', [RegisteredUserController::class, 'create'])
         ->name('register');
 
@@ -36,7 +36,7 @@ Route::middleware('guest:teacher')->prefix('teacher')->name('teacher.')->group(f
         ->name('password.store');
 });
 
-Route::middleware('auth:teacher')->prefix('teacher')->name('teacher.')->group(function () {
+Route::middleware('auth:teacher')->prefix('employe')->name('employe.')->group(function () {
 
     Route::get('/dashboard', function () {
         return view('teacher.dashboard');

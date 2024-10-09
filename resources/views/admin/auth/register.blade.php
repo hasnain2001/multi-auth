@@ -93,12 +93,7 @@
         const passwordError = document.getElementById('password-error');
         const passwordConfirmationError = document.getElementById('password-confirmation-error');
 
-        // Add logic here to show errors if needed
-        // For demonstration, you can set these to display:
-        // nameError.style.display = 'block';
-        // emailError.style.display = 'block';
-        // passwordError.style.display = 'block';
-        // passwordConfirmationError.style.display = 'block';
+
     </script>
 </body>
 </html>

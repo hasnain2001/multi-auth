@@ -60,8 +60,8 @@ class RedirectIfAuthenticated
         if ($request->routeIs('admin.login')) {
             return route('admin.dashboard');
         }
-        if ($request->routeIs('teacher.login')) {
-            return route('teacher.dashboard');
+        if ($request->routeIs('employe.login')) {
+            return route('employe.dashboard');
         }
         if ($request->routeIs('login')) {
             return route('dashboard');

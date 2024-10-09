@@ -6,7 +6,7 @@
         <meta name="csrf-token" content="{{ csrf_token() }}">
 
 
-        <title>Employe-Dashboard </title>
+        <title>@yield('title')</title>
 
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.bunny.net">
@@ -22,7 +22,7 @@
             <!-- Navbar -->
             <nav class="navbar navbar-expand-lg navbar-light bg-light">
                 <div class="container-fluid">
-                    <a class="navbar-brand" href="{{route('teacher.dashboard')}}">Employe Dashboard</a>
+                    <a class="navbar-brand" href="{{route('employe.dashboard')}}">Employe Dashboard</a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
@@ -30,14 +30,14 @@
                         <ul class="navbar-nav ms-auto">
                             <!-- Profile Dropdown -->
                             <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <a class="nav-link dropdown-toggle" href="{{route('employe.profile.edit')}}" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                     {{ Auth::user()->name }}
                                 </a>
                                 <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                                    <li><a class="dropdown-item" href="{{route('teacher.profile.edit')}}">Profile</a></li>
+                                    <li><a class="dropdown-item" href="{{route('employe.profile.edit')}}">Profile</a></li>
                                     <li>
                                         <!-- Logout -->
-                                        <form method="POST" action="{{ route('teacher.logout') }}">
+                                        <form method="POST" action="{{ route('employe.logout') }}">
                                             @csrf
                                             <button type="submit" class="dropdown-item">Logout</button>
                                         </form>
